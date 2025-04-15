@@ -58,7 +58,7 @@ Welcome to the **AI-Powered Content Writer** project! This repository contains a
 
 1. Clone the repository:
    ```bash
-   https://github.com/vinoth-vk-16/ContentWriter-MultiAgent.git
+   git clone https://github.com/vinoth-vk-16/ContentWriter-MultiAgent.git
    ```
 
 2. Install dependencies:
