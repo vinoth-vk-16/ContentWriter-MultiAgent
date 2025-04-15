@@ -1,0 +1,38 @@
+<!-- templates/content_calendar.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title id='Cal'>Content Calendar</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Content Calendar</h2>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Content Type</th>
+            <th>Publish Date</th>
+        </tr>
+        {% for row in calendar %}
+        <tr>
+            <td>{{ row['Title'] }}</td>
+            <td>{{ row['Content Type'] }}</td>
+            <td>{{ row['Publish Date'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

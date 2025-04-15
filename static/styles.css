@@ -1,0 +1,146 @@
+/* static/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #FFFFFF 40%, #F0F4F8 60%); /* White with subtle gradient */
+    color: #0D0D0D; /* Black */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.menu-bar {
+    background: linear-gradient(90deg, #1C2526 0%, #2A3439 100%); /* Navy gradient */
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-title {
+    color: #FFFFFF; /* White */
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.menu-title:hover {
+    transform: scale(1.05);
+    color: #E0E6F0; /* Lighter white for hover */
+}
+
+h1, h2, h3 {
+    color: #1C2526; /* Navy */
+    font-weight: 700;
+    border-bottom: 3px solid rgba(28, 37, 38, 0.8); /* Navy with transparency */
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stButton>button {
+    background: linear-gradient(90deg, #1C2526 0%, #2A3439 100%); /* Navy gradient */
+    color: #FFFFFF; /* White */
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stButton>button:hover {
+    background: linear-gradient(90deg, #2A3439 0%, #3A4A50 100%); /* Darker navy gradient */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.stTextInput>label, .stSelectbox>label, .stDateInput>label, .stTextArea>label {
+    font-weight: 500;
+    color: #1C2526; /* Navy */
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.stTextInput>div>input, .stSelectbox>div, .stDateInput>div, .stTextArea>textarea {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(28, 37, 38, 0.1); /* Subtle navy border */
+    border-radius: 10px;
+    color: #0D0D0D;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.stTextInput>div>input:focus, .stSelectbox>div:focus, .stDateInput>div:focus, .stTextArea>textarea:focus {
+    border-color: #1C2526;
+    box-shadow: 0 0 0 3px rgba(28, 37, 38, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.stExpander {
+    background: linear-gradient(135deg, #FFFFFF 70%, #F0F4F8 100%);
+    border: 1px solid rgba(28, 37, 38, 0.1);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.stRadio>label {
+    font-weight: 500;
+    color: #1C2526;
+    font-size: 16px;
+}
+
+.stMarkdown {
+    background: linear-gradient(135deg, #FFFFFF 70%, #F0F4F8 100%);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(28, 37, 38, 0.1);
+    color: #0D0D0D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.stTable {
+    background: linear-gradient(135deg, #FFFFFF 70%, #F0F4F8 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(28, 37, 38, 0.1);
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stTable th, .stTable td {
+    border: 1px solid rgba(28, 37, 38, 0.1);
+    padding: 14px;
+    color: #0D0D0D;
+}
+
+.stTable th {
+    background: linear-gradient(90deg, #1C2526 0%, #2A3439 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stSpinner {
+    color: #1C2526;
+}
+
+/* Add padding to content to avoid overlap with fixed menu bar */
+div[data-testid="stAppViewContainer"] {
+    padding-top: 80px;
+}
